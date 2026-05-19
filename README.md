@@ -35,23 +35,6 @@ Data augmentation designed for UAV aerial imagery characteristics:
 | AerialScaleJitter | Altitude-aware scale jitter preserving small object visibility |
 | AerialPerspectiveTransform | Simulates perspective distortion from UAV altitude and angle variations |
 
-## Quick Start
-
-### Training
-
-```bash
-# Default training
-python train_casa.py
-
-# Custom parameters
-python train_casa.py --epochs 100 --batch-size 8 --img-size 1024
-```
-
-### Inference
-
-```bash
-python predict_casa.py --model-path runs/train/casa_net_train/weights/best.pt --source test.jpg
-```
 
 ## Model Configuration
 
@@ -63,17 +46,3 @@ python predict_casa.py --model-path runs/train/casa_net_train/weights/best.pt --
 | `aerial_aug=True` | Enable aerial data augmentation |
 | `aerial_perspective=0.5` | Aerial perspective transform probability |
 
-## Dataset
-
-Validated on RSOD aerial dataset with four object classes:
-
-- aircraft
-- oiltank
-- overpass
-- playground
-
-## Citation
-
-```bibtex
-CASA-Net: Context-Aware Small Object Detection Network for UAV Aerial Images
-```
